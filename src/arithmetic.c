@@ -7,31 +7,40 @@ int div(int a, int b);
 
 int main()
 {
-    int a;
+    float a;
     printf("Введите первое число:");
     
-    if (scanf("%d", &a) != 1)
+    if (scanf("%f", &a) != 1)
     {
         printf("n/a");
         return 0;
     }
 
-    int b;
+    float b;
     printf("Введите второе число:");
-    if (scanf("%d", &b) != 1)
+    if (scanf("%f", &b) != 1)
     {
         printf("n/a");
         return 0;
     }
 
-    printf("%d %d %d ", sum(a, b), subtract(a, b), multiplay(a, b));
+    int c = a;
+    int d = b;
+
+    if (c != a || d != b)
+    {
+        printf("n/a");
+        return 0;
+    }
+
+    printf("%d %d %d ", sum(c, d), subtract(c, d), multiplay(c, d));
     
     if (b==0)
     {
         printf("n/a");
     }else
     {
-        printf("%d", div(a, b));
+        printf("%d", div(c, d));
     }
 
     return 0;
