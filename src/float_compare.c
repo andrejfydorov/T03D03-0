@@ -7,8 +7,8 @@ int main() {
     double res = fun();
   
     // CHANGE THIS IF - AI
-    if (res == 0)
-       printf("OK!");
+    if ((int)res == 0) 
+        printf("OK!");
  
     return 0;
 }

@@ -9,19 +9,29 @@ int main()
 {
     int a;
     printf("Введите первое число:");
-    scanf("%d", &a);
+    
+    if (scanf("%d", &a) != 1)
+    {
+        printf("n/a");
+        return 0;
+    }
 
     int b;
     printf("Введите второе число:");
-    scanf("%d", &b);
+    if (scanf("%d", &b) != 1)
+    {
+        printf("n/a");
+        return 0;
+    }
 
     printf("%d %d %d ", sum(a, b), subtract(a, b), multiplay(a, b));
+    
     if (b==0)
     {
-        printf("n/a\n");
+        printf("n/a");
     }else
     {
-        printf("%d\n", div(a, b));
+        printf("%d", div(a, b));
     }
 
     return 0;
